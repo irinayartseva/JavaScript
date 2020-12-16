@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+
+        //     1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100.
+        //
+        let i = 0;
+        while (i < 100) {
+            let simple = true;
+            if (i <= 1) simple = false;
+            for (let j = 2; j < i; j++) {
+                if (i % j === 0) simple = false;
+            }
+            if (simple) console.log(i);
+            i++;
+        }
+
+        // 2. С этого урока начинаем работать с функционалом интернет-магазина. Предположим, есть сущность корзины. Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров. Товары в корзине хранятся в массиве. Задачи:
+        //
+
+        // a) Организовать такой массив для хранения товаров в корзине;
+        let basket = [
+            {
+                nameProduct: "яблоко",
+                priceProduct: 200,
+                quality: 1
+            },
+            {
+                nameProduct: "банан",
+                priceProduct: 250,
+                quality: 1
+            },
+            {
+                nameProduct: "груша",
+                priceProduct: 260,
+                quality: 2
+            }];
+
+        // b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
+        //
+        function countBasketPrice(basket) {
+            let priceBasket = 0;
+            for(i = 0; i < basket.length; i++){
+                priceBasket += basket[i].priceProduct * basket[i].quality;
+            }
+            return priceBasket;
+        }
+        console.log(countBasketPrice(basket));
+
+        // 3.*Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. Выглядеть это должно так:
+        //
+        // for(…){// здесь пусто}
+
+        for (i = 0; i < 10; console.log(i++)) {
+        }
+
+        // for(i = 0; i < 10; i++ ) {
+        //     console.log(i)
+        // }
+
+        // 4. *Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5:
+
+    </script>
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
